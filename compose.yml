@@ -1,0 +1,14 @@
+version: "3"
+services:
+    ftp-server:
+        ports:
+            - 57721:21/tcp
+        environment:
+            - FTP_USER=my-user
+            - FTP_PASS=my$$password{67%Me #The Dollar is escaped by a Dollar!
+        build:
+          context: .
+          dockerfile: Dockerfile
+        image: docker.io/garethflowers/ftp-server
+        volumes:
+            - /tmp/ftp:/home/plesk-backup
