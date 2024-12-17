@@ -5,10 +5,10 @@ services:
             - 57721:21/tcp
         environment:
             - FTP_USER=my-user
-            - FTP_PASS=my$$password{67%Me #The Dollar is escaped by a Dollar!
+            - FTP_PASS=my$$password #The Dollar is escaped by a Dollar!
         build:
           context: .
           dockerfile: Dockerfile
-        image: docker.io/garethflowers/ftp-server
+        image: docker-ftp-server:local
         volumes:
-            - /tmp/ftp:/home/plesk-backup
+            - /tmp/ftp:/home/my-user
