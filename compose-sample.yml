@@ -9,6 +9,6 @@ services:
         build:
           context: .
           dockerfile: Dockerfile
-        image: docker-ftp-server:local
+        image: localhost/docker-ftp-server:local
         volumes:
             - /tmp/ftp:/home/my-user
